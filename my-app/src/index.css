@@ -11,30 +11,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-:root{
-  --main-color: #0f58df;
-  --black-color: #000000;
-  --border: 0.1rem solid rgba(255, 255, 255, 0.4);
-}
- body {
-    background-color: var(--main-color);
-    overflow-x: hidden;
-   }
-   section {
-    padding: 3.5rem 7%;
-   }
-   a {
-    color: var(--black-color);
-    text-decoration: none;
-   }
-   .btn {
-    margin-top: 1rem;
-    display: inline-block;
-    padding: 2rem 3.75rem;
-    border-radius: 30rem;
-    font-size: 1.7rem;
-    color: #fff;
-    background-color: #101f3b;
-    cursor: pointer;
-}
