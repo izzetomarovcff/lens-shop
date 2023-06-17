@@ -27,6 +27,9 @@ function Login(props) {
     const changetype =()=>{
         props.activeregister()
     }
+    const changelogin = () =>{
+        props.activelogin()
+    }
     return (
         <div className="wrapper">
             <div className="form-box login">
@@ -47,7 +50,7 @@ function Login(props) {
                         <label><input type="checkbox" checked={isChecked} onChange={handleCheckboxChange} />Remember me</label>
                         <Link to="/" >Forgot Password?</Link>
                     </div>
-                    <button type="submit" className="btn">Login</button>
+                    <button type="submit" className="btn" onClick={changelogin}>Login</button>
                     <div class="login-register">
                         <p>Don't have an account?
                             <Link to="/" className="register-link" onClick={changetype}  > Register</Link>

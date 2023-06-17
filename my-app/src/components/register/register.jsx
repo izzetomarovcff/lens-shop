@@ -37,6 +37,9 @@ function Register(props) {
     const handlePasswordChange = (e) => {
         setPassword(e.target.value);
     }
+    const changelogin = () =>{
+        props.activelogin2()
+    }
     return (
         <div className="wrapper">
             <div class="form-box">
@@ -60,7 +63,7 @@ function Register(props) {
                     <div class="remember-forgot">
                         <label><input type="checkbox" checked={isChecked} onChange={handleCheckboxChange}/> I agree to the terms & conditions</label>
                     </div>
-                    <button type="submit" className="btn">Register</button>
+                    <button type="submit" className="btn" onClick={changelogin}>Register</button>
                     <div class="login-register">
                         <p>Already have an account?
                             <Link to="/" className="register-link" onClick={changetype2}  > Login</Link>
