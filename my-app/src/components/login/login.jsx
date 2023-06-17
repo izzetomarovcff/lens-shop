@@ -2,7 +2,7 @@ import React from "react";
 import './login.css'
 import { useState } from "react";
 import { Link } from "react-router-dom";
-function Login() {
+function Login(props) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [isChecked, setIsChecked] = useState(false);
@@ -24,6 +24,9 @@ function Login() {
         setEmail('');
         setPassword('');
     };
+    const changetype =()=>{
+        props.activeregister()
+    }
     return (
         <div className="wrapper">
             <div className="form-box login">
@@ -47,9 +50,10 @@ function Login() {
                     <button type="submit" className="btn">Login</button>
                     <div class="login-register">
                         <p>Don't have an account?
-                            <Link to="/" className="register-link"> Register</Link>
+                            <Link to="/" className="register-link" onClick={changetype}  > Register</Link>
                         </p>
                     </div>
+                    
                 </form>
             </div>
         </div>

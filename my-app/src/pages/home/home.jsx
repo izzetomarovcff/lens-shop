@@ -7,6 +7,12 @@ import { useState } from "react";
 function Home() {
   const [login, setLogin] = useState(false);
   const [register, setRegister] = useState(true);
+  const enableregister = ()=>{
+    setRegister(false)
+  }
+  const enablelogin = ()=>{
+    setRegister(true)
+  }
   return (
     <div>
       <div className="home">
@@ -19,7 +25,7 @@ function Home() {
               YOUR DOOR ASAP!
             </p>
           </div>
-          {login?(<div></div>):(register?(<Login/>):(<Register/>))}
+          {login?(<div></div>):(register?(<Login activeregister={enableregister}/>):(<Register activelogin={enablelogin} />))}
           
           
         </div>
