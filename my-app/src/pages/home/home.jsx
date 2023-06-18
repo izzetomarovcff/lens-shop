@@ -59,14 +59,14 @@ function Home() {
             </div>
           )
           )}
-          
+
         </div>
       </div>
       <div className="additions" id="additions">
         <h1 className="heading">Additions</h1>
         <div className="box-container">
-            {GeneralResponse.adddata.map(addition=>(
-              <div className="box">
+          {GeneralResponse.adddata.map(addition => (
+            <div className="box">
               <div className="box-head">
                 <span className="title">{addition.type}</span>
                 <Link to="/" className='name'>{addition.name}</Link>
@@ -83,13 +83,13 @@ function Home() {
                   <div className="a" onClick={handlAadditionsOnclick}>
                     <i className="fas fa-plus"></i>
                   </div>
-  
+
                 </div>
               </div>
             </div>
-            ))}
-          {/*  */}
-          
+          ))}
+
+
         </div>
       </div>
       <div className="about" id="about">
