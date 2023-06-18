@@ -46,7 +46,7 @@ function Addition() {
               <Link to="/" className='name'>Lens Box Black</Link>
             </div>
             <div className="image">
-              <img src='images/additions-2.png' alt="" />
+              <img src='images/additions-2.png' alt="sd" />
             </div>
             <div className="box-bottom">
               <div className="info">
@@ -66,7 +66,7 @@ function Addition() {
               <Link to="/" className='name'>Lens Box Blue</Link>
             </div>
             <div className="image">
-              <img src='images/additions-3.png' alt="" />
+              <img src='images/additions-3.png' alt="v" />
             </div>
             <div className="box-bottom">
               <div className="info">
