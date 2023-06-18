@@ -6,6 +6,7 @@ import About from './components/aboutus/about';
 import Addition from './components/addition/addition';
 import Contact from './components/contactus/contact';
 import Product from './components/products/products';
+import Rewiew from './components/rewiew/rewiew'
 function App() {
   return (
     <BrowserRouter>
@@ -15,7 +16,7 @@ function App() {
         <Route path="/addition" element={<Addition />}  />
         <Route path="/contact" element={<Contact />}  />
         <Route path="/products" element={<Product />}  />
-        <Route path="/rewiew" element={<Product />}  />
+        <Route path="/rewiew" element={<Rewiew />}  />
       </Routes>
     </BrowserRouter>
     
