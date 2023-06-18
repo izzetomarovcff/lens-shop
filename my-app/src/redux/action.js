@@ -11,3 +11,16 @@ export const SetRegister = (register)=>{
         payload: register
     }
 }
+
+export const AddCart = product=>{
+    return {
+        type: 'ADD_CART',
+        payload: product
+    }
+}
+export const AddAdditionCart = addition=>{
+    return {
+        type: 'ADD_CARTA',
+        payload: addition
+    }
+}

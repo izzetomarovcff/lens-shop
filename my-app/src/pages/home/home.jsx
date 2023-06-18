@@ -5,23 +5,24 @@ import Footer from "../../components/footer/footer";
 import Login from "../../components/login/login.jsx";
 import Register from "../../components/register/register";
 import { useDispatch, useSelector } from "react-redux";
-
+import { AddCart } from "../../redux/action";
+import { AddAdditionCart } from "../../redux/action";
 import { Link } from "react-router-dom";
 function Home() {
   const dispatch = useDispatch()
   const { GeneralResponse } = useSelector(state => state)
-  const handleOnclick = () => {
+  const handleOnclick = (product) => {
     if (GeneralResponse.login === false) {
       alert("Please login")
     } else {
-
+      dispatch(AddCart(product))
     }
   }
-  const handlAadditionsOnclick = () => {
+  const handlAadditionsOnclick = (addition) => {
     if (GeneralResponse.login === false) {
       alert("Please login")
     } else {
-
+      dispatch(AddAdditionCart(addition))
     }
   }
   return (
@@ -35,7 +36,6 @@ function Home() {
               STILL DONT RECEIVE PRODUCTS FROM TRENDLENS?! START REVIEW NOW. GET THE PRODUCT YOU ARE LOOKING FOR AT
               YOUR DOOR ASAP!
             </p>
-
             <h3>{GeneralResponse.login}</h3>
           </div>
           {GeneralResponse.login ? (<div></div>) : (GeneralResponse.register ? (<Login />) : (<Register />))}
@@ -53,7 +53,7 @@ function Home() {
                 <div className="price">{product.price} <span>{product.old_price}</span>
                 </div>
                 <div className="box-bottom">
-                  <div className="btn" onClick={handleOnclick}>{product.addbutton}</div>
+                  <div className="btn" onClick={()=>handleOnclick(product)}>{product.addbutton}</div>
                 </div>
               </div>
             </div>
@@ -80,7 +80,7 @@ function Home() {
                   <span className="amount">{addition.description}</span>
                 </div>
                 <div className="additions-btn">
-                  <div className="a" onClick={handlAadditionsOnclick}>
+                  <div className="a" onClick={()=>handlAadditionsOnclick(addition)}>
                     <i className="fas fa-plus"></i>
                   </div>
 

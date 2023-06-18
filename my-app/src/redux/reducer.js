@@ -1,10 +1,12 @@
 import { prodata } from "./data";
-import {additiondata} from "./data"
+import { additiondata } from "./data"
 const INITIAL_STATE = {
     login: false,
     register: true,
     productdata: prodata,
-    adddata: additiondata
+    adddata: additiondata,
+    cart: [],
+    additioncart: []
 
 }
 export default (state = INITIAL_STATE, action) => {
@@ -14,7 +16,10 @@ export default (state = INITIAL_STATE, action) => {
 
         case "SET_REGISTER":
             return { ...state, register: action.payload }
-
+        case "ADD_CART":
+            return { ...state, cart: [...state.cart, action.payload] }
+        case "ADD_CARTA":
+            return { ...state, additioncart: [...state.additioncart, action.payload] }
         default:
             return state;
     }

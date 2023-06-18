@@ -3,14 +3,15 @@ import React from "react";
 import Header from '../header/header.jsx';
 import Footer from "../footer/footer.jsx";
 import { useDispatch, useSelector } from "react-redux";
-
+import { AddCart } from "../../redux/action";
 function Product() {
+  const dispatch = useDispatch()
   const {GeneralResponse} = useSelector(state=>state)
-  const handleOnclick = () => {
+  const handleOnclick = (product) => {
     if (GeneralResponse.login === false) {
       alert("Please login")
     } else {
-
+      dispatch(AddCart(product))
     }
   }
   return (
@@ -28,7 +29,7 @@ function Product() {
                 <div className="price">{product.price} <span>{product.old_price}</span>
                 </div>
                 <div className="box-bottom">
-                  <div className="btn" onClick={handleOnclick}>{product.addbutton}</div>
+                  <div className="btn" onClick={()=>handleOnclick(product)}>{product.addbutton}</div>
                 </div>
               </div>
             </div>
