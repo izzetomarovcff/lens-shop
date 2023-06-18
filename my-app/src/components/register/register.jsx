@@ -21,10 +21,10 @@ function Register(props) {
     }
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('Username:', username);
-        console.log('Email:', email);
-        console.log('Password:', password);
-        
+        dispatch(SetLogin(true))
+        console.log(username)
+        console.log(email)
+        console.log(password)
         setUsername('');
         setEmail('');
         setPassword('');
@@ -40,7 +40,7 @@ function Register(props) {
         setPassword(e.target.value);
     }
     const changelogin = () =>{
-        dispatch(SetLogin(true))
+        
         
     }
     return (
@@ -64,7 +64,7 @@ function Register(props) {
                         <label>Password</label>
                     </div>
                     <div class="remember-forgot">
-                        <label><input type="checkbox" checked={isChecked} onChange={handleCheckboxChange}/> I agree to the terms & conditions</label>
+                        <label><input type="checkbox" checked={isChecked} onChange={handleCheckboxChange} required/> I agree to the terms & conditions</label>
                     </div>
                     <button type="submit" className="btn" onClick={changelogin}>Register</button>
                     <div class="login-register">

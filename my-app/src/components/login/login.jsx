@@ -24,8 +24,9 @@ function Login(props) {
     };
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('Username:', email);
-        console.log('Password:', password);
+        dispatch(SetLogin(true))
+        console.log(email)
+        console.log(password)
         setEmail('');
         setPassword('');
     };
@@ -33,7 +34,7 @@ function Login(props) {
         dispatch(SetRegister(false))
     }
     const changelogin = () =>{
-        dispatch(SetLogin(true))
+        
     }
     return (
         <div className="wrapper">
