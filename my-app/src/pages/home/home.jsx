@@ -50,7 +50,7 @@ function Home() {
                 <img src={product.img} alt="lens" />
                 <span className="product-category">{product.type}</span>
                 <h3>{product.name}</h3>
-                <div className="price">{product.price} <span>{product.old_price}</span>
+                <div className="price">₺{product.price} <span>{product.old_price}</span>
                 </div>
                 <div className="box-bottom">
                   <div className="btn" onClick={()=>handleOnclick(product)}>{product.addbutton}</div>

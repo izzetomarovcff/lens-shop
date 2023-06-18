@@ -4,13 +4,18 @@ import { Link } from 'react-router-dom';
 import { useState } from "react";
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { useDispatch, useSelector } from "react-redux";
 function Header() {
+    const dispatch = useDispatch()
+    const { GeneralResponse } = useSelector(state => state)
     const [v1, setV1] = useState('a');
     const [v2, setV2] = useState('a');
     const [v3, setV3] = useState('a');
     const [v4, setV4] = useState('a');
     const [v5, setV5] = useState('a');
     const [v6, setV6] = useState('a');
+    const [search, setSearch] = useState('search-form');
+    const [cart, setCart] = useState('deactivecart');
     const location = useLocation();
     useEffect(()=>{
         if(location.pathname==='/'){
@@ -27,6 +32,20 @@ function Header() {
             setV6('a active')
         }
     },location)
+    const activesearch= ()=>{
+        if(search==="search-form"){
+            setSearch('active')
+        }else{
+            setSearch('search-form')
+        }
+    }
+    const activecart= ()=>{
+        if(cart==="deactivecart"){
+            setCart('activecart')
+        }else{
+            setCart('deactivecart')
+        }
+    }
   return (
     <div className="header">
         <Link to="/" className="logo"><img src='images/logo.png' alt="image" /></Link>
@@ -40,18 +59,44 @@ function Header() {
         </nav>
         <div className="buttons">
 
-            <button id="search-btn">
+            <button id="search-btn" onClick={activesearch}>
                 <i className="fas fa-search">
                 </i>
 
             </button>
-            <button id="cart-btn">
+            <button id="cart-btn" onClick={activecart}>
                 <i className="fas fa-shopping-cart">
                 </i>
             </button>
+            
             <button id="menu-btn">
                 <i className="fas fa-bars"></i>
             </button>
+            
+        </div>
+        <div class={search}>
+            <input type="text" class="search-input" id="search-box" placeholder="search here" />
+            <i class="fas fa-search"></i>
+        </div>
+        <div className={cart}>
+            {GeneralResponse.cart.map(proitem=>(
+                <div className="itemss">
+                    <div className="cartimg">
+                        <img src={proitem.img} alt="dsg" />
+                    </div>
+                    <h1>{proitem.name}</h1>
+                    <h1>{proitem.price}</h1>
+                </div>
+            ))}
+            {GeneralResponse.additioncart.map(additem=>(
+                <div className="itemss">
+                    <div className="cartimg">
+                        <img src={additem.img} alt="dsg" />
+                    </div>
+                    <h1>{additem.name}</h1>
+                    <h1>{additem.price}</h1>
+                </div>
+            ))}
         </div>
     </div>
   );
