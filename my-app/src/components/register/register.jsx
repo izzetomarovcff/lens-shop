@@ -2,10 +2,12 @@ import React from "react";
 import './register.css'
 import '../login/login.css'
 import { useState } from "react";
-import { Link } from "react-router-dom";
-
-
+import { Link} from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { SetLogin,SetRegister } from "../../redux/action";
 function Register(props) {
+    const dispatch = useDispatch()
+    const {GeneralResponse} = useSelector(state=>state)
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -15,7 +17,7 @@ function Register(props) {
         setIsChecked(e.target.checked);
     };
     const changetype2 = () => {
-        props.activelogin()
+        dispatch(SetRegister(true))
     }
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -38,7 +40,8 @@ function Register(props) {
         setPassword(e.target.value);
     }
     const changelogin = () =>{
-        props.activelogin2()
+        dispatch(SetLogin(true))
+        
     }
     return (
         <div className="wrapper">

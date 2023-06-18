@@ -9,10 +9,16 @@ import img7 from '../../images/lens-7.png';
 import img8 from '../../images/lens-8.png';
 import Header from '../header/header.jsx';
 import Footer from "../footer/footer.jsx";
+import { useDispatch, useSelector } from "react-redux";
 
 function Product() {
+  const {GeneralResponse} = useSelector(state=>state)
   const handleOnclick = () => {
-    
+    if (GeneralResponse.login === false) {
+      alert("Please login")
+    } else {
+
+    }
   }
   return (
     <div className="">

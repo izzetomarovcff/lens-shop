@@ -2,7 +2,12 @@ import React from "react";
 import './login.css'
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { SetLogin,SetRegister } from "../../redux/action";
+
 function Login(props) {
+    const dispatch = useDispatch()
+    const {GeneralResponse} = useSelector(state=>state)
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [isChecked, setIsChecked] = useState(false);
@@ -25,10 +30,10 @@ function Login(props) {
         setPassword('');
     };
     const changetype =()=>{
-        props.activeregister()
+        dispatch(SetRegister(false))
     }
     const changelogin = () =>{
-        props.activelogin()
+        dispatch(SetLogin(true))
     }
     return (
         <div className="wrapper">

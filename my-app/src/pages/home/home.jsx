@@ -5,6 +5,8 @@ import Footer from "../../components/footer/footer";
 import Login from "../../components/login/login.jsx";
 import Register from "../../components/register/register";
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { SetLogin } from "../../redux/action";
 import img1 from '../../images/lens-1.png';
 import img2 from '../../images/lens-2.png';
 import img3 from '../../images/lens-3.png';
@@ -25,26 +27,17 @@ import avatar3 from '../../images/avatar-3.png';
 
 import { Link } from "react-router-dom";
 function Home() {
-  const [login, setLogin] = useState(false);
-  const [register, setRegister] = useState(true);
-  const enableregister = () => {
-    setRegister(false)
-  }
-  const enablelogin = () => {
-    setRegister(true)
-  }
-  const logined = () => {
-    setLogin(true)
-  }
+  const dispatch = useDispatch()
+  const {GeneralResponse} = useSelector(state=>state)
   const handleOnclick = () => {
-    if (login === false) {
+    if (GeneralResponse.login === false) {
       alert("Please login")
     } else {
 
     }
   }
   const handlAadditionsOnclick = () => {
-    if (login === false) {
+    if (GeneralResponse.login === false) {
       alert("Please login")
     } else {
 
@@ -61,8 +54,9 @@ function Home() {
               STILL DONT RECEIVE PRODUCTS FROM TRENDLENS?! START REVIEW NOW. GET THE PRODUCT YOU ARE LOOKING FOR AT
               YOUR DOOR ASAP!
             </p>
+            <h3>{GeneralResponse.login}</h3>
           </div>
-          {login ? (<div></div>) : (register ? (<Login activeregister={enableregister} activelogin={logined} />) : (<Register activelogin={enablelogin} activelogin2={logined} />))}
+          {GeneralResponse.login ? (<div></div>) : (GeneralResponse.register ? (<Login />) : (<Register />))}
         </div>
       </div>
       <div className="products" id="products">

@@ -5,9 +5,15 @@ import Footer from "../footer/footer.jsx";
 import imga1 from '../../images/additions-1.png';
 import imga2 from '../../images/additions-2.png';
 import imga3 from '../../images/additions-3.png';
+import { useDispatch, useSelector } from "react-redux";
 function Addition() {
+  const {GeneralResponse} = useSelector(state=>state)
   const handlAadditionsOnclick = () => {
-    
+    if (GeneralResponse.login === false) {
+      alert("Please login")
+    } else {
+
+    }
   }
   return (
     <div className="">
