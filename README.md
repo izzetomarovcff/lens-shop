@@ -1,4 +1,4 @@
 # lens-shop
-`$ cd my-app`\n
+`$ cd my-app`<br>
 `$ npm install`
 `$ npm start`
