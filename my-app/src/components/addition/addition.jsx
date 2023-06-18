@@ -2,15 +2,20 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Header from '../header/header.jsx'
 import Footer from "../footer/footer.jsx";
-
+import { AddAdditionCart } from "../../redux/action.js";
 import { useDispatch, useSelector } from "react-redux";
 function Addition() {
+  const dispatch = useDispatch()
   const { GeneralResponse } = useSelector(state => state)
-  const handlAadditionsOnclick = () => {
+  const handlAadditionsOnclick = (addition) => {
     if (GeneralResponse.login === false) {
       alert("Please login")
     } else {
-
+      if (GeneralResponse.login === false) {
+        alert("Please login")
+      } else {
+        dispatch(AddAdditionCart(addition))
+      }
     }
   }
   return (
@@ -34,7 +39,7 @@ function Addition() {
                   <span className="amount">{addition.description}</span>
                 </div>
                 <div className="additions-btn">
-                  <div className="a" onClick={handlAadditionsOnclick}>
+                  <div className="a" onClick={()=>handlAadditionsOnclick(addition)}>
                     <i className="fas fa-plus"></i>
                   </div>
 

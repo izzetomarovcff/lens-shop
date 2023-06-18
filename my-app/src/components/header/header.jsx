@@ -85,7 +85,7 @@ function Header() {
                         <img src={proitem.img} alt="dsg" />
                     </div>
                     <h1>{proitem.name}</h1>
-                    <h1>{proitem.price}</h1>
+                    <h1>₺{proitem.price}</h1>
                 </div>
             ))}
             {GeneralResponse.additioncart.map(additem=>(
@@ -94,7 +94,7 @@ function Header() {
                         <img src={additem.img} alt="dsg" />
                     </div>
                     <h1>{additem.name}</h1>
-                    <h1>{additem.price}</h1>
+                    <h1>₺{additem.price}</h1>
                 </div>
             ))}
         </div>
