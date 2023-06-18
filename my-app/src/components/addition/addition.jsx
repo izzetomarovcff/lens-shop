@@ -2,9 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Header from '../header/header.jsx'
 import Footer from "../footer/footer.jsx";
-import imga1 from '../../images/additions-1.png';
-import imga2 from '../../images/additions-2.png';
-import imga3 from '../../images/additions-3.png';
+
 import { useDispatch, useSelector } from "react-redux";
 function Addition() {
   const {GeneralResponse} = useSelector(state=>state)
@@ -27,7 +25,7 @@ function Addition() {
               <Link to="/" className='name'>Lens Solution</Link>
             </div>
             <div className="image">
-              <img src={imga1} alt="" />
+              <img src='images/additions-1.png' alt="" />
             </div>
             <div className="box-bottom">
               <div className="info">
@@ -48,7 +46,7 @@ function Addition() {
               <Link to="/" className='name'>Lens Box Black</Link>
             </div>
             <div className="image">
-              <img src={imga2} alt="" />
+              <img src='images/additions-2.png' alt="" />
             </div>
             <div className="box-bottom">
               <div className="info">
@@ -68,7 +66,7 @@ function Addition() {
               <Link to="/" className='name'>Lens Box Blue</Link>
             </div>
             <div className="image">
-              <img src={imga3} alt="" />
+              <img src='images/additions-3.png' alt="" />
             </div>
             <div className="box-bottom">
               <div className="info">

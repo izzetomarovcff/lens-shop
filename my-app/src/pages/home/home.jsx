@@ -5,15 +5,6 @@ import Footer from "../../components/footer/footer";
 import Login from "../../components/login/login.jsx";
 import Register from "../../components/register/register";
 import { useDispatch, useSelector } from "react-redux";
-import imga1 from '../../images/additions-1.png';
-import imga2 from '../../images/additions-2.png';
-import imga3 from '../../images/additions-3.png';
-import imgabout from '../../images/about.jpg';
-import imglearn from '../../images/learn more.png';
-import imgreview from '../../images/rewiew.png.png';
-import avatar1 from '../../images/avatar-1.png';
-import avatar2 from '../../images/avatar-2.png';
-import avatar3 from '../../images/avatar-3.png';
 
 import { Link } from "react-router-dom";
 function Home() {
@@ -74,13 +65,14 @@ function Home() {
       <div className="additions" id="additions">
         <h1 className="heading">Additions</h1>
         <div className="box-container">
+
           <div className="box">
             <div className="box-head">
               <span className="title">add</span>
               <Link to="/" className='name'>Lens Solution</Link>
             </div>
             <div className="image">
-              <img src={imga1} alt="" />
+              <img src='images/additions-1.png' alt="" />
             </div>
             <div className="box-bottom">
               <div className="info">
@@ -95,60 +87,21 @@ function Home() {
               </div>
             </div>
           </div>
-          <div className="box">
-            <div className="box-head">
-              <span className="title">add</span>
-              <Link to="/" className='name'>Lens Box Black</Link>
-            </div>
-            <div className="image">
-              <img src={imga2} alt="" />
-            </div>
-            <div className="box-bottom">
-              <div className="info">
-                <b className="price">₺55</b>
-                <span className="amount">mate box</span>
-              </div>
-              <div className="additions-btn">
-                <div className="a" onClick={handlAadditionsOnclick}>
-                  <i className="fas fa-plus"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="box">
-            <div className="box-head">
-              <span className="title">add</span>
-              <Link to="/" className='name'>Lens Box Blue</Link>
-            </div>
-            <div className="image">
-              <img src={imga3} alt="" />
-            </div>
-            <div className="box-bottom">
-              <div className="info">
-                <b className="price">₺55</b>
-                <span className="amount">mate box</span>
-              </div>
-              <div className="additions-btn">
-                <div className="a" onClick={handlAadditionsOnclick}>
-                  <i className="fas fa-plus"></i>
-                </div>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </div>
       <div className="about" id="about">
         <h1 className="heading">About Us </h1>
         <div className="row">
           <div className="image">
-            <img src={imgabout} alt="about" />
+            <img src='images/about.jpg' alt="about" />
           </div>
           <div className="content">
             <h3>Why Us?</h3>
             <p>We come across this question often! Because we are honored to offer the customer our best quality,
               most affordable, coolest and most useful lenses. Customer satisfaction is our pride! That's why we
               do our job with confidence and care. Also we provide payment at the door.</p>
-            <a href={imglearn} className="btn">learn more</a>
+            <a href='images/learn more.png' className="btn">learn more</a>
           </div>
         </div>
       </div>
@@ -156,13 +109,13 @@ function Home() {
         <h1 className="heading">customer's rewiew</h1>
         <div className="box-container">
           <div className="box">
-            <img src={imgreview} alt="rewiew-1" />
+            <img src='images/rewiew.png.png' alt="rewiew-1" />
             <p>The lenses I bought are not lasting like they used to. They tear easy. I’ve noticed my eye getting
               uncomfortable and then go to clean this never happened before. I went to check online to see if they
               changed something and it looks as though other people are noticing a difference as well. I’m not
               sure what it is, but it’s very disappointing.
             </p>
-            <img src={avatar1} alt="avatar-1.png" className="user" />
+            <img src='images/avatar-1.png' alt="avatar-1.png" className="user" />
             <h3>jennifer lowrence</h3>
             <div className="stars">
               <i className="fas fa-star"></i>
@@ -173,13 +126,13 @@ function Home() {
             </div>
           </div>
           <div className="box">
-            <img src={imgreview} alt="rewiew-1" />
+            <img src='images/rewiew.png.png' alt="rewiew-1" />
             <p>I have used these lenses for years, but my last batch, are torn at the edge and the quality is really
               bad, any suggestions on a different brand. What a company will do for money over quality, let’s not
               stay with a company that doesn’t care about their customers. My eyes are very important to me, but I
               guess not to them.
             </p>
-            <img src={avatar2} alt="avatar-2.png" className="user" />
+            <img src='images/avatar-2.png' alt="avatar-2.png" className="user" />
             <h3>tom holland</h3>
             <div className="stars">
               <i className="fas fa-star"></i>
@@ -190,12 +143,12 @@ function Home() {
             </div>
           </div>
           <div className="box">
-            <img src={imgreview} alt="rewiew-1" />
+            <img src='images/rewiew.png.png' alt="rewiew-1" />
             <p>These are my first contact lenses that I have gotten and they are very comfortable. You can't feel
               them in your eyes at all; you forget that you're wearing contacts! They also keep moisturized all
               day. I highly recommend these lenses, they are the best out there.These acuvue oasys contacts feel
               amazing. I could hardly even tell I'm wearing contacts! Yayy :)</p>
-            <img src={avatar3} alt="avatar-3.png" className="user" />
+            <img src='images/avatar-3.png' alt="avatar-3.png" className="user" />
             <h3>adriana cooper</h3>
             <div className="stars">
               <i className="fas fa-star"></i>

@@ -1,5 +1,5 @@
 .home {
-  background: url(../../images/home.jpg) no-repeat;
+  background: url(./home.jpg) no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;
