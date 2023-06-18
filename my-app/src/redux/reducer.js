@@ -1,8 +1,10 @@
 import { prodata } from "./data";
+import {additiondata} from "./data"
 const INITIAL_STATE = {
     login: false,
     register: true,
-    productdata: prodata
+    productdata: prodata,
+    adddata: additiondata
 
 }
 export default (state = INITIAL_STATE, action) => {

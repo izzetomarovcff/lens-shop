@@ -73,3 +73,31 @@ export const prodata = [
         addbutton: 'add to cart'
     },
 ]
+
+export const additiondata = [
+    {
+        id:1,
+        type: 'add',
+        name: 'Lens Solution',
+        img: 'images/additions-1.png',
+        price: 80,
+        description: '450ml'
+    },
+    {
+        id:2,
+        type: 'add',
+        name: 'Lens Box Black',
+        img: 'images/additions-2.png',
+        price: 55,
+        description: 'Mate Box'
+    },
+    {
+        id:3,
+        type: 'add',
+        name: 'Lens Box Blue',
+        img: 'images/additions-3.png',
+        price: 55,
+        description: 'Mate Box'
+    },
+    
+]
