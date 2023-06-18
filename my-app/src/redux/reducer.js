@@ -1,6 +1,9 @@
+import { prodata } from "./data";
 const INITIAL_STATE = {
     login: false,
-    register: true
+    register: true,
+    productdata: prodata
+
 }
 export default (state = INITIAL_STATE, action) => {
     switch (action.type) {

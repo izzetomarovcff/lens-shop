@@ -1,7 +1,6 @@
 import React from "react";
 import './header.css';
 import { Link } from 'react-router-dom';
-import myImage from '../../images/logo.png'
 import { useState } from "react";
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
@@ -30,7 +29,7 @@ function Header() {
     },location)
   return (
     <div className="header">
-        <Link to="/" className="logo"><img src={myImage} alt="image" /></Link>
+        <Link to="/" className="logo"><img src='images/logo.png' alt="image" /></Link>
         <nav class="navbar">
             <Link to="/" className={v1}>Home</Link>
             <Link to="/products" className={v2}>Products</Link>
