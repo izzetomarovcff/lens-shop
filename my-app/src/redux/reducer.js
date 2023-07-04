@@ -5,6 +5,7 @@ const INITIAL_STATE = {
     register: true,
     productdata: prodata,
     adddata: additiondata,
+    activecart: false,
     cart: [],
     additioncart: []
 
@@ -20,6 +21,8 @@ export default (state = INITIAL_STATE, action) => {
             return { ...state, cart: [...state.cart, action.payload] }
         case "ADD_CARTA":
             return { ...state, additioncart: [...state.additioncart, action.payload] }
+        case "ACTIVE_CART":
+            return { ...state, activecart: action.payload }
         default:
             return state;
     }

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Header from '../header/header.jsx'
 import Footer from "../footer/footer.jsx";
 import { AddAdditionCart } from "../../redux/action.js";
+import { ActiveCart }  from '../../redux/action';
 import { useDispatch, useSelector } from "react-redux";
 function Addition() {
   const dispatch = useDispatch()
@@ -15,6 +16,7 @@ function Addition() {
         alert("Please login")
       } else {
         dispatch(AddAdditionCart(addition))
+        dispatch(ActiveCart(true))
       }
     }
   }

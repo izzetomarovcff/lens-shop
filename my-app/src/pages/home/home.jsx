@@ -7,6 +7,7 @@ import Register from "../../components/register/register";
 import { useDispatch, useSelector } from "react-redux";
 import { AddCart } from "../../redux/action";
 import { AddAdditionCart } from "../../redux/action";
+import { ActiveCart }  from '../../redux/action';
 import { Link } from "react-router-dom";
 function Home() {
   const dispatch = useDispatch()
@@ -16,6 +17,7 @@ function Home() {
       alert("Please login")
     } else {
       dispatch(AddCart(product))
+      dispatch(ActiveCart(true))
     }
   }
   const handlAadditionsOnclick = (addition) => {
@@ -23,6 +25,7 @@ function Home() {
       alert("Please login")
     } else {
       dispatch(AddAdditionCart(addition))
+      dispatch(ActiveCart(true))
     }
   }
   return (

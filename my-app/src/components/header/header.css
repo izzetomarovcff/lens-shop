@@ -104,3 +104,15 @@
   .cartimg img{
     height: 50px;
   }
+
+  .delete{
+    font-size: 20px;
+    color: silver;
+    padding: 3px;
+  }
+  .delete:hover{
+    color: red;
+    font-size: 21px;
+    transform: translate();
+    padding: 3px;
+  }

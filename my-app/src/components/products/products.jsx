@@ -4,6 +4,7 @@ import Header from '../header/header.jsx';
 import Footer from "../footer/footer.jsx";
 import { useDispatch, useSelector } from "react-redux";
 import { AddCart } from "../../redux/action";
+import { ActiveCart }  from '../../redux/action';
 function Product() {
   const dispatch = useDispatch()
   const {GeneralResponse} = useSelector(state=>state)
@@ -12,6 +13,7 @@ function Product() {
       alert("Please login")
     } else {
       dispatch(AddCart(product))
+      dispatch(ActiveCart(true))
     }
   }
   return (

@@ -78,7 +78,8 @@ function Header() {
             <input type="text" class="search-input" id="search-box" placeholder="search here" />
             <i class="fas fa-search"></i>
         </div>
-        <div className={cart}>
+        {GeneralResponse.activecart ? (
+            <div className={cart}>
             {GeneralResponse.cart.map(proitem=>(
                 <div className="itemss">
                     <div className="cartimg">
@@ -86,18 +87,23 @@ function Header() {
                     </div>
                     <h1>{proitem.name}</h1>
                     <h1>₺{proitem.price}</h1>
+                    <i class="fa-solid fa-xmark delete"></i>
                 </div>
             ))}
             {GeneralResponse.additioncart.map(additem=>(
+                
                 <div className="itemss">
                     <div className="cartimg">
                         <img src={additem.img} alt="dsg" />
                     </div>
                     <h1>{additem.name}</h1>
                     <h1>₺{additem.price}</h1>
+                    <i class="fa-solid fa-xmark delete"></i>
                 </div>
             ))}
         </div>
+        ):(<div></div>)}
+        
     </div>
   );
 }

@@ -24,3 +24,9 @@ export const AddAdditionCart = addition=>{
         payload: addition
     }
 }
+export const ActiveCart = cartactive=>{
+    return {
+        type: 'ACTIVE_CART',
+        payload: cartactive
+    }
+}
