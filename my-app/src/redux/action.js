@@ -42,3 +42,21 @@ export const RemoveAddtionCart = removedaddition=>{
         payload: removedaddition
     }
 }
+export const Filter = filteredproduct=>{
+    return {
+        type: 'FILTER_PRODUCT',
+        payload: filteredproduct
+    }
+}
+export const FilterAddition = filteredaddition=>{
+    return {
+        type: 'FILTER_ADDITION',
+        payload: filteredaddition
+    }
+}
+export const SetSearch = search=>{
+    return {
+        type: 'SET_SEARCH',
+        payload: search
+    }
+}

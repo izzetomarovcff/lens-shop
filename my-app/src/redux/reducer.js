@@ -7,7 +7,10 @@ const INITIAL_STATE = {
     adddata: additiondata,
     activecart: false,
     cart: [],
-    additioncart: []
+    additioncart: [],
+    search: false,
+    productfiltered: [],
+    additionfiltered: []
 
 }
 export default (state = INITIAL_STATE, action) => {
@@ -27,6 +30,12 @@ export default (state = INITIAL_STATE, action) => {
             return { ...state, cart: action.payload }
         case "REMOVED_ADDITION_CART":
             return { ...state, additioncart: action.payload }
+        case "FILTER_PRODUCT":
+            return { ...state, productfiltered: action.payload }
+        case "FILTER_ADDITION":
+            return { ...state, additionfiltered: action.payload }
+        case "SET_SEARCH":
+            return { ...state, search: action.payload }
         default:
             return state;
     }

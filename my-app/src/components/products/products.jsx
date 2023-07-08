@@ -1,11 +1,15 @@
 import React from "react";
-
+import { useState } from "react";
 import Header from '../header/header.jsx';
 import Footer from "../footer/footer.jsx";
 import { useDispatch, useSelector } from "react-redux";
 import { AddCart } from "../../redux/action";
 import { ActiveCart }  from '../../redux/action';
+
 function Product() {
+  // const [query, setQuery] = useState('');
+  // const [searchResults, setSearchResults] = useState([]);
+  
   const dispatch = useDispatch()
   const {GeneralResponse} = useSelector(state=>state)
   const handleOnclick = (product) => {
@@ -16,6 +20,19 @@ function Product() {
       dispatch(ActiveCart(true))
     }
   }
+  // const handleInputChange = (event) => {
+  //   const searchTerm = event.target.value;
+    
+  //   // setQuery(searchTerm);
+  //   // filterData(searchTerm);
+  // };
+
+  // const filterData = (searchTerm) => {
+  //   const filteredData = GeneralResponse.productdata.filter(item =>
+  //     item.name.toLowerCase().includes(searchTerm.toLowerCase())
+  //   );
+  //   setSearchResults(filteredData);
+  // };
   return (
     <div className="">
       <Header />
