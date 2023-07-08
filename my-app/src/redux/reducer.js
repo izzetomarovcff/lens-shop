@@ -23,6 +23,10 @@ export default (state = INITIAL_STATE, action) => {
             return { ...state, additioncart: [...state.additioncart, action.payload] }
         case "ACTIVE_CART":
             return { ...state, activecart: action.payload }
+        case "REMOVED_CART":
+            return { ...state, cart: action.payload }
+        case "REMOVED_ADDITION_CART":
+            return { ...state, additioncart: action.payload }
         default:
             return state;
     }

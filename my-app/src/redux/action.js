@@ -30,3 +30,15 @@ export const ActiveCart = cartactive=>{
         payload: cartactive
     }
 }
+export const RemoveCart = removed=>{
+    return {
+        type: 'REMOVED_CART',
+        payload: removed
+    }
+}
+export const RemoveAddtionCart = removedaddition=>{
+    return {
+        type: 'REMOVED_ADDITION_CART',
+        payload: removedaddition
+    }
+}

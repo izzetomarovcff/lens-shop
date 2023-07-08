@@ -7,7 +7,8 @@ export const prodata = [
         name: 'Blue Color Lens',
         price: 110,
         old_price: '₺150',
-        addbutton: 'add to cart'
+        addbutton: 'add to cart',
+        cartcount: 0
     },
     {
         id: 2,
@@ -16,7 +17,8 @@ export const prodata = [
         name: 'Red Color Lens',
         price: 110,
         old_price: '₺150',
-        addbutton: 'add to cart'
+        addbutton: 'add to cart',
+        cartcount: 0
     },
     {
         id: 3,
@@ -25,7 +27,8 @@ export const prodata = [
         name: 'Green Color Lens',
         price: 110,
         old_price: '₺150',
-        addbutton: 'add to cart'
+        addbutton: 'add to cart',
+        cartcount: 0
     },
     {
         id: 4,
@@ -34,7 +37,8 @@ export const prodata = [
         name: 'Grey Color Lens',
         price: 110,
         old_price: '₺150',
-        addbutton: 'add to cart'
+        addbutton: 'add to cart',
+        cartcount: 0
     },
     {
         id: 5,
@@ -43,7 +47,8 @@ export const prodata = [
         name: 'Number Lens',
         price: 120,
         old_price: '₺160',
-        addbutton: 'add to cart'
+        addbutton: 'add to cart',
+        cartcount: 0
     },
     {
         id: 6,
@@ -52,7 +57,8 @@ export const prodata = [
         name: 'Number Lens',
         price: 120,
         old_price: '₺160',
-        addbutton: 'add to cart'
+        addbutton: 'add to cart',
+        cartcount: 0
     },
     {
         id: 7,
@@ -61,7 +67,8 @@ export const prodata = [
         name: 'Number Lens',
         price: 120,
         old_price: '₺160',
-        addbutton: 'add to cart'
+        addbutton: 'add to cart',
+        cartcount: 0
     },
     {
         id: 8,
@@ -70,7 +77,8 @@ export const prodata = [
         name: 'Number Lens',
         price: 120,
         old_price: '₺160',
-        addbutton: 'add to cart'
+        addbutton: 'add to cart',
+        cartcount: 0
     },
 ]
 
@@ -81,7 +89,8 @@ export const additiondata = [
         name: 'Lens Solution',
         img: 'images/additions-1.png',
         price: 80,
-        description: '450ml'
+        description: '450ml',
+        cartcount: 0
     },
     {
         id:2,
@@ -89,7 +98,8 @@ export const additiondata = [
         name: 'Lens Box Black',
         img: 'images/additions-2.png',
         price: 55,
-        description: 'Mate Box'
+        description: 'Mate Box',
+        cartcount: 0
     },
     {
         id:3,
@@ -97,7 +107,8 @@ export const additiondata = [
         name: 'Lens Box Blue',
         img: 'images/additions-3.png',
         price: 55,
-        description: 'Mate Box'
+        description: 'Mate Box',
+        cartcount: 0
     },
     
 ]

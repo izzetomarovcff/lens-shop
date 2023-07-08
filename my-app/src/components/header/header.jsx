@@ -5,6 +5,9 @@ import { useState } from "react";
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
+import { RemoveCart } from '../../redux/action'
+import { RemoveAddtionCart } from '../../redux/action'
+import { ActiveCart } from '../../redux/action'
 function Header() {
     const dispatch = useDispatch()
     const { GeneralResponse } = useSelector(state => state)
@@ -46,6 +49,17 @@ function Header() {
             setCart('deactivecart')
         }
     }
+    const removeLensItem=(proitem)=>{
+        const updatedItems = GeneralResponse.cart.filter((cartitem)=>cartitem.id !== proitem.id)
+        dispatch(RemoveCart(updatedItems))
+        
+    }
+    const removeAdditionItem=(addition)=>{
+        const updatedAdditionItems = GeneralResponse.additioncart.filter((additioncartitem)=>additioncartitem.id !== addition.id)
+        dispatch(RemoveAddtionCart(updatedAdditionItems))  
+            
+    }
+
   return (
     <div className="header">
         <Link to="/" className="logo"><img src='images/logo.png' alt="image" /></Link>
@@ -87,7 +101,7 @@ function Header() {
                     </div>
                     <h1>{proitem.name}</h1>
                     <h1>₺{proitem.price}</h1>
-                    <i class="fa-solid fa-xmark delete"></i>
+                    <i class="fa-solid fa-xmark delete" onClick={()=>removeLensItem(proitem)}></i>
                 </div>
             ))}
             {GeneralResponse.additioncart.map(additem=>(
@@ -98,7 +112,7 @@ function Header() {
                     </div>
                     <h1>{additem.name}</h1>
                     <h1>₺{additem.price}</h1>
-                    <i class="fa-solid fa-xmark delete"></i>
+                    <i class="fa-solid fa-xmark delete" onClick={()=>removeAdditionItem(additem)}></i>
                 </div>
             ))}
         </div>
